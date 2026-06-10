@@ -2,5 +2,6 @@
 <datarefrence refrence="provided">
 <pkg>[tkinter , vulkan]</pkg>
 <script type="deltascript" readas_w="true">
+<scriptfile>vulkanData.delta.detd<scriptfile>
 </script>
 </datarefrence>
