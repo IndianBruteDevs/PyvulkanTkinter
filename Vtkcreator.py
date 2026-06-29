@@ -24,6 +24,24 @@ class DialogBox(Toplevel):
 class ProjectPanel(DialogBox):
   def __init__(self, mparent):
     super().__init__(mparent) 
+    self.title("Welcome!") 
+    self.geometry("500x400") 
+    self.create_new = ttk.Button(self, text="Create new project") 
+    self.create_new.pack(side=TOP , pady=10)
+    self.handleEvents()
+    
+  def handleEvents(self):
+      self.elems = (self.create_new) 
+      self.create_new.bind("<Button-1>" , redirect)
+
+def redirect(event=None):
+         projectdialog.destroy()
+         new_dialog = DialogBox(root)  
+         new_dialog.geometry("700x600") 
+         new_dialog.title("New project")
+          
+        
+      
 
 
 projectdialog = ProjectPanel(root)
